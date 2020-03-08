@@ -1,7 +1,8 @@
-import Image
+from PIL import Image
 
 userName = ""
 ready = False
+
 
 def getPlayerName():
     global userName
@@ -32,14 +33,14 @@ def listSuspects():
     suspectTwo = "Robert -- Mary's ex-boyfriend. They broke up after an argument. About two weeks ago. She has a restraining order against him.\n"
     suspectThree = "Kate -- Mary's sister. She wanted to be the CEO of the company. She was upset when she was not chosen\n"
 
-    print("\n\nThese are the current suspects in Mary's death\n\n")
+    print("\n\nThese are the current suspects in Mary's death: \n\n")
     print(suspectOne)
     print(suspectTwo)
     print(suspectThree)
 
 def challenge():
     global userName
-    print("\nIt's up tp Detective " + userName + " to solve the case of her murder")
+    print("\nIt's up tp Detective " + userName + " to solve the case of her murder\n")
 
 def userOptions():
 
@@ -47,13 +48,14 @@ def userOptions():
     optionTwo = "Look at the pictures (type 2) "
     optionThree = "End the game (type 3)"
 
-    print(optionOne + optionTwo + optionThree)
+    print("What would you like to do?\n")
+    print(optionOne +"\n"+ optionTwo +"\n"+ optionThree)
     response = raw_input("")
 
     if(response == "1"):
         print ("more clues")
     elif (response == "2"):
-        showImage("/home/kab2/Desktop/magnifying.jpg")
+        showImage("C:/Users/kimya/OneDrive/Desktop/img.png")
     else:
         print ("game over")
 
@@ -70,4 +72,4 @@ def gameLogic():
     userOptions()
 
 # gameLogic()
-showImage("/home/kab2/Desktop/magnifying.jpg")
+gameLogic()
